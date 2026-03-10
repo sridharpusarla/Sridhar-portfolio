@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P. Sridhar | ECE Portfolio</title>
+    <meta name="description" content="Portfolio of P. Sridhar - Electronics and Communication Engineering Student">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@300;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Loading Screen -->
+    <div id="loader" class="loader">
+        <div class="cube-wrapper">
+            <div class="cube">
+                <div class="face front"></div>
+                <div class="face back"></div>
+                <div class="face right"></div>
+                <div class="face left"></div>
+                <div class="face top"></div>
+                <div class="face bottom"></div>
+            </div>
+            <p>INITIALIZING SYSTEM...</p>
+        </div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Scroll Progress -->
+    <div class="scroll-progress"></div>
+
+    <!-- Background 3D Canvas -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">PS.<span>DEV</span></div>
+        <ul class="nav-links">
+            <li><a href="#hero" class="active">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="mobile-menu-btn"><i class="fas fa-bars"></i></div>
+    </nav>
+
+    <main class="content-wrapper">
+        <!-- Hero Section -->
+        <section id="hero" class="section hero glass-section hidden">
+            <div class="hero-content">
+                <h3 class="greeting">System Online. Welcome,</h3>
+                <h1 class="name">I'm <span>P. Sridhar</span></h1>
+                <h2 class="title">Electronics & Communication Engineering Student</h2>
+                <p class="tagline">"Passionate about Digital Systems, VLSI Design, Embedded Systems, and Intelligent
+                    Hardware Solutions."</p>
+                <div class="hero-btns">
+                    <a href="#projects" class="btn primary-btn"><i class="fas fa-microchip"></i> View Projects</a>
+                    <a href="#" class="btn secondary-btn"><i class="fas fa-download"></i> Download CV</a>
+                    <a href="#contact" class="btn outline-btn"><i class="fas fa-envelope"></i> Contact Me</a>
+                </div>
+            </div>
+            <div class="hero-image-wrapper">
+                <div class="hero-card tilt-card">
+                    <div class="card-inner">
+                        <img src="profile.jpg.jpeg" alt="P. Sridhar" class="profile-img">
+                        <div class="card-glow"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="section about glass-section hidden">
+            <div class="section-title">
+                <h2>About <span>Me</span></h2>
+                <div class="underline"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I am an Electronics and Communication Engineering student at <strong>Lovely Professional
+                            University</strong>. I have a strong interest in Digital System Design, VLSI, and Embedded
+                        Systems.</p>
+                    <p>I enjoy building intelligent hardware systems and working with HDL languages like Verilog and
+                        VHDL. My goal is to contribute to advanced semiconductor and embedded technology development,
+                        bridging the gap between hardware architectures and software intelligence.</p>
+                </div>
+                <div class="about-3d-icons">
+                    <div class="rotating-sphere">
+                        <div class="icon-ring ring1"><i class="fas fa-microchip"></i></div>
+                        <div class="icon-ring ring2"><i class="fas fa-network-wired"></i></div>
+                        <div class="icon-ring ring3"><i class="fas fa-satellite-dish"></i></div>
+                        <div class="icon-ring ring4"><i class="fas fa-laptop-code"></i></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section skills hidden">
+            <div class="section-title">
+                <h2>Technical <span>Arsenal</span></h2>
+                <div class="underline"></div>
+            </div>
+            <div class="skills-container">
+                <div class="skill-category tilt-card glass-panel">
+                    <h3><i class="fas fa-code"></i> Languages</h3>
+                    <ul class="skill-list">
+                        <li><span>C</span>
+                            <div class="bar">
+                                <div class="fill" style="width: 85%"></div>
+                            </div>
+                        </li>
+                        <li><span>Python</span>
+                            <div class="bar">
+                                <div class="fill" style="width: 90%"></div>
+                            </div>
+                        </li>
+                        <li><span>Verilog</span>
+                            <div class="bar">
+                                <div class="fill" style="width: 80%"></div>
+                            </div>
+                        </li>
+                        <li><span>VHDL</span>
+                            <div class="bar">
+                                <div class="fill" style="width: 75%"></div>
+                            </div>
+                        </li>
+                        <li><span>C++</span>
+                            <div class="bar">
+                                <div class="fill" style="width: 80%"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="skill-category tilt-card glass-panel">
+                    <h3><i class="fas fa-tools"></i> Tools / Platforms</h3>
+                    <ul class="skill-list tags">
+                        <li>Xilinx Vivado</li>
+                        <li>Keil µVision</li>
+                        <li>MATLAB</li>
+                        <li>Proteus</li>
+                        <li>Cadence Virtuoso</li>
+                    </ul>
+                </div>
+                <div class="skill-category tilt-card glass-panel">
+                    <h3><i class="fas fa-brain"></i> Soft Skills</h3>
+                    <div class="hex-grid">
+                        <div class="hex"><span>Time Management</span></div>
+                        <div class="hex"><span>Critical Thinking</span></div>
+                        <div class="hex"><span>Attention to Detail</span></div>
+                        <div class="hex"><span>Teamwork</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience & Education Section -->
+        <section id="experience" class="section experience hidden">
+            <div class="section-title">
+                <h2>Journey & <span>Milestones</span></h2>
+                <div class="underline"></div>
+            </div>
+
+            <div class="timeline-container">
+                <!-- Education -->
+                <div class="timeline-column glass-panel">
+                    <h3><i class="fas fa-graduation-cap"></i> Education</h3>
+                    <div class="timeline">
+                        <div class="timeline-item tilt-card">
+                            <div class="timeline-dot"></div>
+                            <h4>B.Tech – ECE</h4>
+                            <h5>Lovely Professional University</h5>
+                            <span class="date">Aug 2023 – Present</span>
+                            <p>CGPA: 6.82</p>
+                        </div>
+                        <div class="timeline-item tilt-card">
+                            <div class="timeline-dot"></div>
+                            <h4>Intermediate (PCM)</h4>
+                            <h5>Narayana Junior College</h5>
+                            <span class="date">Completed</span>
+                            <p>Score: 80%</p>
+                        </div>
+                        <div class="timeline-item tilt-card">
+                            <div class="timeline-dot"></div>
+                            <h4>Matriculation</h4>
+                            <h5>Bhashyam High School</h5>
+                            <span class="date">Completed</span>
+                            <p>Score: 98%</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Training & Achievements -->
+                <div class="timeline-column glass-panel">
+                    <h3><i class="fas fa-award"></i> Training & Achievements</h3>
+                    <div class="timeline">
+                        <div class="timeline-item tilt-card">
+                            <div class="timeline-dot"></div>
+                            <h4>Digital System Design</h4>
+                            <h5>Lovely Professional University</h5>
+                            <p>Designed and simulated digital circuits using logic design concepts, Verilog HDL, and
+                                simulation tools. Implemented combinational and sequential circuits.</p>
+                        </div>
+                        <div class="timeline-item tilt-card achievement-card">
+                            <div class="timeline-dot neon-dot"></div>
+                            <h4><i class="fas fa-trophy"></i> Achievement</h4>
+                            <p>Designed and simulated 8-to-3 CMOS Encoder using Cadence Virtuoso</p>
+                        </div>
+                        <div class="timeline-item tilt-card achievement-card">
+                            <div class="timeline-dot neon-dot"></div>
+                            <h4><i class="fas fa-users"></i> Acknowledgment</h4>
+                            <p>Recognized for teamwork and leadership in group projects</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Certificates -->
+            <div class="certificates-wrapper">
+                <h3 class="sub-heading">Certifications</h3>
+                <div class="cert-grid">
+                    <div class="cert-card tilt-card">
+                        <i class="fab fa-python cert-icon"></i>
+                        <h4>Python Programming</h4>
+                        <p>Coursera</p>
+                    </div>
+                    <div class="cert-card tilt-card">
+                        <i class="fas fa-memory cert-icon"></i>
+                        <h4>VLSI System on Chip Design</h4>
+                        <p>Maven Silicon</p>
+                    </div>
+                    <div class="cert-card tilt-card">
+                        <i class="fas fa-database cert-icon"></i>
+                        <h4>DBMS</h4>
+                        <p>NPTEL</p>
+                    </div>
+                    <div class="cert-card tilt-card">
+                        <i class="fab fa-cuttlefish cert-icon"></i>
+                        <h4>C Programming</h4>
+                        <p>HackerRank</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section projects hidden">
+            <div class="section-title">
+                <h2>Featured <span>Projects</span></h2>
+                <div class="underline"></div>
+            </div>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card tilt-card glass-panel">
+                    <div class="project-img">
+                        <div class="tech-overlay">
+                            <span>Cadence</span>
+                            <span>DSCH</span>
+                        </div>
+                        <div class="project-3d-model p1">
+                            <i class="fas fa-memory fa-4x"></i>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Design of 4T SRAM and 4T DRAM</h3>
+                        <p class="desc">Designed and simulated 4-transistor SRAM and DRAM memory cells using CMOS.
+                            Studied memory architecture in VLSI and analyzed read, write and hold operations.</p>
+                        <a href="#" class="view-btn"><i class="fas fa-external-link-alt"></i> Details</a>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="project-card tilt-card glass-panel">
+                    <div class="project-img">
+                        <div class="tech-overlay">
+                            <span>Hardware</span>
+                            <span>C++</span>
+                        </div>
+                        <div class="project-3d-model p2">
+                            <i class="fas fa-car fa-4x"></i>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Automatic Toll Tax System</h3>
+                        <p class="desc">Developed an automatic toll collection machine to reduce manual work and waiting
+                            time. Implemented core embedded programming logic for hardware control.</p>
+                        <a href="#" class="view-btn"><i class="fas fa-external-link-alt"></i> Details</a>
+                    </div>
+                </div>
+                <!-- Project 3 -->
+                <div class="project-card tilt-card glass-panel">
+                    <div class="project-img">
+                        <div class="tech-overlay">
+                            <span>MATLAB</span>
+                            <span>Arduino</span>
+                            <span>Neural Networks</span>
+                        </div>
+                        <div class="project-3d-model p3">
+                            <i class="fas fa-wheelchair fa-4x"></i>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Voice Controlled Wheelchair</h3>
+                        <p class="desc">Built a voice controlled wheelchair navigation system. Used LPC/MFCC speech
+                            recognition with Neural Networks to enable hands-free navigation for the disabled.</p>
+                        <a href="#" class="view-btn"><i class="fas fa-external-link-alt"></i> Details</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section contact crystal-section hidden">
+            <div class="section-title">
+                <h2>Initiate <span>Connection</span></h2>
+                <div class="underline"></div>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info tilt-card glass-panel">
+                    <h3>Contact Information</h3>
+                    <p>I'm always open to discussing hardware development work or partnership opportunities.</p>
+                    <ul class="info-list">
+                        <li>
+                            <div class="icon-box"><i class="fas fa-envelope"></i></div>
+                            <div class="info-text">
+                                <span>Email</span>
+                                <a href="mailto:sridharpusarla4@gmail.com">sridharpusarla4@gmail.com</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icon-box"><i class="fas fa-phone"></i></div>
+                            <div class="info-text">
+                                <span>Phone</span>
+                                <a href="tel:+917036104151">+91-7036104151</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="social-links">
+                        <a href="https://github.com/sridharpusarla" target="_blank" class="social-btn"><i
+                                class="fab fa-github"></i></a>
+                        <a href="https://linkedin.com/in/sridharpusarla" target="_blank" class="social-btn"><i
+                                class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <form class="contact-form tilt-card glass-panel">
+                    <h3>Send a Message</h3>
+                    <div class="input-group">
+                        <input type="text" id="name" required>
+                        <label for="name">Your Name</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="email" id="email" required>
+                        <label for="email">Your Email</label>
+                    </div>
+                    <div class="input-group">
+                        <textarea id="message" rows="5" required></textarea>
+                        <label for="message">Your Message</label>
+                    </div>
+                    <button type="submit" class="submit-btn">
+                        <span>Send Message</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                    <div class="form-status"></div>
+                </form>
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer-content">
+                <p>&copy; 2026 P. Sridhar. All Rights Reserved.</p>
+                <div class="pulse-indicator">
+                    <span class="dot"></span> System Online
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <!-- Scripts -->
+    <!-- Three.js Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
